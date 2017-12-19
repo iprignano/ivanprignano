@@ -1,6 +1,8 @@
 ---
 ---
 
+@import 'shapes';
+
 $avatar-dimensions: 200px;
 $social-icon-dimensions: 20px;
 
@@ -49,10 +51,12 @@ body {
 .title {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
+  font-size: 2.5em;
 }
 
 .paragraph {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
 }
 
 .social-wrapper {
@@ -114,17 +118,4 @@ body {
 
 .social-email {
   color: #dd4b39;
-}
-
-// Shapes
-.triangle {
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-bottom: 100px solid #f2f2f2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(60deg);
 }

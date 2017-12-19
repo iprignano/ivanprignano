@@ -1,0 +1,67 @@
+.shape {
+  width: 0;
+  height: 0;
+  position: absolute;
+  transition: transform 1000ms ease;
+}
+
+.shape-0 {
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 60px solid #abec71;
+  top: 0;
+  left: 0;
+  transform: rotate(-43deg) translate(40%, -150%);
+  transition-delay: 52ms;
+  transition-duration: 2000ms;
+  z-index: 2;
+
+  &.in-place {
+    transform: rotate(60deg);
+  }
+}
+
+.shape-1 {
+  width: 30px;
+  height: 30px;
+	background-color: #a1e7ff;
+  top: -40px;
+  left: 15px;
+  transform: rotate(-2003deg) translate(40%, -50%);
+  transition-duration: 1770ms;
+
+  &.in-place {
+    transform: rotate(-36deg);
+  }
+}
+
+.shape-2 {
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-bottom: 18px solid #b099f1;
+  top: -54px;
+  left: 78px;
+  transform: rotate(73deg) translate(240%, 50%);
+  transition-delay: 80ms;
+  transition-duration: 1170ms;
+
+  &.in-place {
+    transform: rotate(156deg);
+  }
+}
+
+.shape-3 {
+  width: 18px;
+  height: 18px;
+	background-color: #f9e87f;
+  border-radius: 50%;
+  top: -20px;
+  left: 70px;
+  transform: rotate(4deg) translate(440%, 150%);
+  transition-delay: 100ms;
+  transition-duration: 2970ms;
+
+  &.in-place {
+    transform: rotate(106deg);
+  }
+}
