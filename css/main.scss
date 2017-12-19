@@ -26,9 +26,11 @@ body {
 .avatar-wrapper {
   width: $avatar-dimensions;
   height: $avatar-dimensions;
+  position: relative;
 }
 
 .avatar {
+  background-color: #f2f2f2;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -41,7 +43,7 @@ body {
 }
 
 .bio-wrapper {
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 
 .title {
@@ -53,10 +55,16 @@ body {
   font-family: 'Inconsolata', monospace;
 }
 
-.social {
+.social-wrapper {
   display: flex;
+  flex-direction: column;
+}
+
+.social {
+  display: inline-flex;
   align-items: center;
-  padding: 8px 5px 8px 0;
+  padding: 5px 0;
+  margin: 3px 0;
   font-family: 'Inconsolata', monospace;
   text-decoration: none;
 
@@ -106,4 +114,17 @@ body {
 
 .social-email {
   color: #dd4b39;
+}
+
+// Shapes
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(60deg);
 }
