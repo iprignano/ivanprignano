@@ -1,8 +1,26 @@
+.shapes-wrapper-0 {
+  transform: rotate(15deg);
+  transition: transform 2500ms ease-out;
+
+  &.in-place {
+    transform: none;
+  }
+}
+
+.shapes-wrapper-1 {
+  transform: rotate(-30deg);
+  transition: transform 2300ms ease-out;
+
+  &.in-place {
+    transform: none;
+  }
+}
+
 .shape {
   width: 0;
   height: 0;
   position: absolute;
-  transition: transform 1000ms ease;
+  transition: transform 1000ms ease-out;
 }
 
 .shape-0 {
@@ -43,7 +61,7 @@
   left: 78px;
   transform: rotate(73deg) translate(240%, 50%);
   transition-delay: 80ms;
-  transition-duration: 1170ms;
+  transition-duration: 2270ms;
 
   &.in-place {
     transform: rotate(156deg);
