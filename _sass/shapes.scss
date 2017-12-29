@@ -1,19 +1,25 @@
-.shapes-wrapper-0 {
-  transform: rotate(15deg);
-  transition: transform 2500ms ease-out;
-
+.shapes-wrapper {
   &.in-place {
     transform: none;
   }
 }
 
+.shapes-wrapper-0 {
+  transform: rotate(15deg);
+  transition: transform 2500ms ease-out;
+  mix-blend-mode: exclusion;
+}
+
 .shapes-wrapper-1 {
   transform: rotate(-30deg);
   transition: transform 2300ms ease-out;
+  mix-blend-mode: multiply;
+}
 
-  &.in-place {
-    transform: none;
-  }
+.shapes-wrapper-2 {
+  transform: rotate(180deg);
+  transition: transform 3000ms ease-out;
+  mix-blend-mode: luminosity;
 }
 
 .shape {
@@ -21,6 +27,7 @@
   height: 0;
   position: absolute;
   transition: transform 1000ms ease-out;
+  mix-blend-mode: multiply;
 }
 
 .shape-0 {
@@ -35,7 +42,9 @@
   z-index: 2;
 
   &.in-place {
-    transform: rotate(60deg);
+    transform: rotate(60deg) translateZ(0);
+    animation: 10s infinite reverse triangle-one;
+    animation-delay: 2000ms;
   }
 }
 
@@ -45,11 +54,13 @@
 	background-color: #a1e7ff;
   top: -40px;
   left: 15px;
-  transform: rotate(-2003deg) translate(40%, -50%);
+  transform: rotate(-203deg) translate(40%, -50%);
   transition-duration: 1770ms;
 
   &.in-place {
-    transform: rotate(-36deg);
+    transform: rotate(-36deg) translateZ(0);
+    animation: 5s infinite reverse square;
+    animation-delay: 1770ms;
   }
 }
 
@@ -64,7 +75,9 @@
   transition-duration: 2270ms;
 
   &.in-place {
-    transform: rotate(156deg);
+    transform: rotate(156deg) translateZ(0);
+    animation: 27s infinite reverse triangle-two;
+    animation-delay: 2270ms;
   }
 }
 
@@ -80,6 +93,80 @@
   transition-duration: 2970ms;
 
   &.in-place {
-    transform: rotate(106deg);
+    transform: rotate(106deg) translateZ(0);
+  }
+}
+
+.shape-4 {
+  width: 3px;
+  height: 18px;
+	background-color: #ff0000;
+  top: -26px;
+  left: 70px;
+  transform: rotate(-214deg) translateZ(0);
+  transition-delay: 100ms;
+  transition-duration: 2970ms;
+
+  &.in-place {
+    transform: rotate(120deg) translateZ(0);
+    animation: 10s infinite reverse stick;
+    animation-delay: 2970ms;
+  }
+}
+
+// In-place animations
+@keyframes triangle-one {
+  0% {
+    transform: rotate(60deg);
+  }
+
+  50% {
+    transform: rotate(72deg);
+  }
+
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes square {
+  0% {
+    transform: rotate(-36deg);
+  }
+
+  50% {
+    transform: rotate(-86deg);
+  }
+
+  100% {
+    transform: rotate(-36deg);
+  }
+}
+
+@keyframes triangle-two {
+  0% {
+    transform: rotate(156deg);
+  }
+
+  50% {
+    transform: rotate(256deg);
+  }
+
+  100% {
+    transform: rotate(156deg);
+  }
+}
+
+@keyframes stick {
+  0% {
+    transform: rotate(120deg);
+  }
+
+  50% {
+    transform: rotate(136deg);
+  }
+
+  100% {
+    transform: rotate(120deg);
   }
 }
